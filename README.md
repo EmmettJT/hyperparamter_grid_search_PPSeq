@@ -32,10 +32,10 @@ These parameters are summarised in the table below:
 ![hyperparam_table](images/hyperparam_table.png)
 
 To decide which paramters you wish to sweep through change the paramter settings in the PPSeq_Interface_hyp_EJTedit.jl script. They are somewhere near the middle of the script (not the best placement for them sorry). Sinply add paramters here and the script will create all the possible combinations of them. 
-eg. here we are setting all of the paramters as fixed (only 1 number in the field) except for the first paramter which has mutliple - this would create PPseq multiple runs, testing each of the chosen paramter combinations. 
-![paramters](params_code.png)
+eg. here we are setting all of the paramters as fixed (only 1 number in the field) except for the first paramter which has 9 - this would create 9 PPseq runs, testing each of the chosen paramter combinations. 
+![parameters](images/params_code.png)
 
-note: about 20 lines beneath this is a variable called 'n_repeats'. by default it is set to 5. This means the grid search will repeat each paramter combination 5 times. 
+note: about 20 lines beneath this is a variable called 'n_repeats'. by default it is set to 5. This means the grid search will repeat each paramter combination 5 times. so for the above combintation this would actually be 45 runs. 
 
 Because of how these combinations scale the number of runs can quickly get out of hand. 
 
@@ -44,8 +44,6 @@ If you have 1 paramters in each field will mean only n_repeats runs: (1x1x1x1x1x
 if you had 5 paramters in each field: (5x5x5x5x5x5x5x5x5x5x5x5x5) x 5 = 6103515625 runs
 
 the number of runs needs to be reflected in the slurm script job array: array=0-4 (for 5 runs)  
-
-_____
 
 
 

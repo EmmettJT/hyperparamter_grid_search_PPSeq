@@ -98,7 +98,12 @@ Make sure to match the run count to your SLURM job array:
 #SBATCH --array=0-4  # For 5 jobs
 ```
 
+## Analysis:
 
+- there are two analysis scripts in this repo - they are messy and incomplete but they should be helpful for checking the hyperparamter runs.
+- '1_PPseq_awake_postprocess_hypersearch' will loop over each file and create raster and tracking alignment plots for each run.
+- 'hyperparameter_results' compares the log likleyhood of each model in the sweep 
+ 
 
 
 

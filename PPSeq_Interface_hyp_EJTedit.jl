@@ -156,7 +156,7 @@ config = Dict(
     :warp_type                  => 1,
 
     :mean_bkgd_spike_rate       => num_neurons * avg_firing_rate * param_grid[slurm_id + 1][10],
-    :var_bkgd_spike_rate        => num_neurons * avg_firing_rate * param_grid[slurm_id + 1][11],
+    :var_bkgd_spike_rate        => (num_neurons * avg_firing_rate * param_grid[slurm_id + 1][11])^2,
     :bkgd_spikes_conc_param     => param_grid[slurm_id + 1][12],
     :max_sequence_length        => param_grid[slurm_id + 1][13],  
 
